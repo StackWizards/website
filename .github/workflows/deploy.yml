@@ -23,5 +23,7 @@ jobs:
           node-version: 16.13.x
           cache: npm
           cache-dependency-path: website/package-lock.json
+      - name: Install
+        run: npm install
       - name: Deploy
         run: npm run deploy
