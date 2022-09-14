@@ -25,5 +25,7 @@ jobs:
           cache-dependency-path: website/package-lock.json
       - name: Install
         run: npm install
+      - run : git config user.email github-actions@github.com
+      - run : git config user.name github-actions
       - name: Deploy
         run: npm run deploy
