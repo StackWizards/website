@@ -22,5 +22,6 @@ jobs:
         with:
           node-version: 16.13.x
           cache: npm
+          cache-dependency-path: website/package-lock.json
       - name: Deploy
         run: npm deploy
