@@ -24,4 +24,4 @@ jobs:
           cache: npm
           cache-dependency-path: website/package-lock.json
       - name: Deploy
-        run: npm deploy
+        run: npm run deploy
