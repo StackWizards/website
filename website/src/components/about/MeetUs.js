@@ -29,7 +29,6 @@ export default function MeetUs() {
                         <p className="text-gray-600">A team of <b>expert software engineers</b> who are obsessed with delivering high-quality software with speed and building amazing things with technology.</p>
                     </div>
                     <ul
-                        role="list"
                         className="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
                     >
                         {people.map((person) => (
