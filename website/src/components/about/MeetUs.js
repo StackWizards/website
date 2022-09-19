@@ -3,15 +3,15 @@ const people = [
     {
         name: 'Alistair Hey',
         role: 'Co-Founder',
-        favouriteArtists: "Arctic Monkeys, Rolling Stones & AC/DC",
-        favouriteQuote: "A mind is like a parachute. It doesn’t work if it isn’t open.",
+        favouriteMovie: "Arctic Monkeys, Rolling Stones & AC/DC",
+        favouriteQuote: "You do not rise to the level of your goals, you fall to the level of your systems.",
         imageUrl:
             'https://media-exp1.licdn.com/dms/image/C4E03AQHNlR25wxGVkQ/profile-displayphoto-shrink_800_800/0/1651934981132?e=1668643200&v=beta&t=tMAEYU1wvCv1llYZOqPcpTLQzU6QFgl0w6JWCJHrtgk',
     },
     {
         name: 'Andy Macdonald',
         role: 'Co-Founder',
-        favouriteArtists: "Queen, Royal Blood & Jimi Hendrix",
+        favouriteMovie: "Back to the Future",
         favouriteQuote: "It is better to fail in originality than to succeed in imitation.",
         imageUrl:
             'https://media-exp1.licdn.com/dms/image/C5603AQFNqy8ePdcVsg/profile-displayphoto-shrink_800_800/0/1573405670049?e=1668643200&v=beta&t=hv0-WtRz3x3iVxCIj3pQAkXvQiwONxE4QFjG3MEUkPY',
@@ -42,10 +42,6 @@ export default function MeetUs() {
                                             <div className="space-y-1 font-medium leading-6">
                                                 <h2 className="font-bold text-xl tracking-tight">{person.name}</h2>
                                                 <p className="text-indigo-600">{person.role}</p>
-                                            </div>
-                                            <div className="text-base">
-                                                <p>🎸 Favourite Music:</p>
-                                                <p className="text-gray-500">{person.favouriteArtists}</p>
                                             </div>
                                             <div className="text-base">
                                                 <p>💭 Favourite Quote:</p>
