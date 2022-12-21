@@ -60,9 +60,9 @@ export default function Contact() {
                     <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:px-8 lg:py-32">
                         <div className="lg:pr-8">
                             <div className="mx-auto max-w-md sm:max-w-lg lg:mx-0">
-                                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Let's work together!</h2>
+                                <h2 className="text-3xl font-bold tracking-tight font-title sm:text-4xl">Let's work together!</h2>
                                 <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                                    We’d love to hear from you! <br />Email us at: <a href='mailto:hello@stackwizards.com'><b className='text-xl text-indigo-600'>hello@stackwizards.com ✉️</b></a>
+                                    We’d love to hear from you! <br />Email us at: <a href='mailto:hello@stackwizards.com'><b className='text-xl text-indigo-600 font-title'>hello@stackwizards.com ✉️</b></a>
                                 </p>
                             </div>
                         </div>

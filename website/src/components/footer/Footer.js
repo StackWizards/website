@@ -15,7 +15,7 @@ export default function Footer() {
                                 src="/images/logo_small.png"
                                 alt="StackWizards"
                             />
-                            <div className="items-center mt-2 text-indigo-600 font-bold">StackWizards Technology Ltd.
+                            <div className="items-center mt-2 text-indigo-600 font-title font-bold">StackWizards Technology Ltd.
                             </div>
                             <p className="text-base text-gray-500">
                                 71-75 Shelton Street,<br />
@@ -91,7 +91,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-12 border-t border-gray-200 pt-8">
-                    <p className="text-base text-gray-400 xl:text-center">&copy; 2022 StackWizards Technology Ltd. All rights reserved.</p>
+                    <p className="text-base text-gray-400 xl:text-center">&copy; <b className="font-semibold">2022 StackWizards Technology Ltd.</b> All rights reserved.</p>
                 </div>
             </div>
         </footer>

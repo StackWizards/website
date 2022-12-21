@@ -21,17 +21,22 @@ export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
 
     return (
-        <Popover className="w-full bg-white">
+        <Popover className="w-full">
             <div id='home' className="mx-auto max-w-7xl px-4 sm:px-6">
-                <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+                <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="#home">
-                            <span className="sr-only">StackWizards</span>
+                        <a className='flex flex-row items-center' href="#home">
+
                             <img
                                 className="h-8 w-auto sm:h-10"
-                                src="/images/logo_with_text.png"
+                                src="/images/logo_small.png"
                                 alt=""
                             />
+                            <div className='flex flex-col justify-evenly'>
+                                <span className='ml-2 font-semibold tracking-tight text-white text-lg'>StackWizards</span>
+                                <span className='ml-2 -mt-2 tracking-tight text-lg lowercase font-title text-primaryText'>Technology Ltd</span>
+
+                            </div>
                         </a>
                     </div>
                     <div className="-my-2 -mr-2 md:hidden">
@@ -41,9 +46,9 @@ export default function Header() {
                         </button>
                     </div>
 
-                    <div style={{ zIndex: 99999 }} className={`md:hidden transition-all ${isMobileMenuOpen ? "" : "-translate-y-96 opacity-0"} flex w-full flex-col items-center py-12 border-b-4 text-center absolute top-20 bg-white left-0`}>
+                    <div style={{ zIndex: 99999 }} className={`md:hidden transition-all ${isMobileMenuOpen ? "" : "-translate-y-96 opacity-0"} flex w-full flex-col items-center py-12 border-b-4 text-center absolute top-20 bg-primaryBg left-0`}>
                         {
-                            navigation.map(nav => (<a href={nav.link} className="text-3xl font-medium text-gray-500 my-2 hover:text-gray-900">
+                            navigation.map(nav => (<a href={nav.link} className="text-2xl font-medium text-white my-2 uppercase font-title hover:text-gray-200">
                                 {nav.name}
                             </a>))
                         }
@@ -51,7 +56,7 @@ export default function Header() {
 
                     <>
                         {
-                            navigation.map(nav => (<a href={nav.link} className="text-lg hidden md:block font-medium text-gray-500 hover:text-gray-900">
+                            navigation.map(nav => (<a href={nav.link} className="text-md font-title hidden md:block uppercase text-white hover:text-gray-200">
                                 {nav.name}
                             </a>))
                         }
@@ -59,7 +64,7 @@ export default function Header() {
                     <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                         <a
                             href="#contact"
-                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap font-bold rounded-md border border-transparent bg-primaryText px-4 py-2 text-base font-bold text-white shadow-sm hover:bg-indigo-400 font-title tracking-tight uppercase"
                         >
                             Get in Touch
                         </a>

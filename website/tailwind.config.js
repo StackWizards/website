@@ -1,12 +1,19 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+      ...colors,
+      primaryBg: "#0f1420",
+      primaryText: "#00bcd4"
+    },
     fontFamily: {
-      'sans': ['DM Sans', 'sans-serif'],
-      'display': ['Inter', 'sans-serif'],
+      'sans': ['Poppins', 'sans-serif'],
+      'title': ['Roboto Slab', 'sans-serif'],
     },
     extend: {},
   },
