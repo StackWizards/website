@@ -41,11 +41,13 @@ export default function MeetUs() {
                             {people.map((person) => (
                                 <li key={person.name}>
                                     <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8 ">
-                                        <div className="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4">
-                                            <Section>
+                                        <Section>
+                                            <div className="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-3">
+
                                                 <img className="transition-all rounded-lg hover:scale-90 object-cover shadow-lg grayscale" src={person.imageUrl} alt="" />
-                                            </Section>
-                                        </div>
+
+                                            </div>
+                                        </Section>
                                         <div className="sm:col-span-2 ml-4">
                                             <div className="space-y-4">
                                                 <div className="space-y-1 font-medium leading-6">
