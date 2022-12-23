@@ -3,6 +3,7 @@ import {
     Bars3Icon
 } from '@heroicons/react/24/outline'
 import React from 'react'
+import { Section } from '../animation/Section'
 
 
 const navigation = [
@@ -48,7 +49,7 @@ export default function Header() {
 
                     <div style={{ zIndex: 99999 }} className={`md:hidden transition-all ${isMobileMenuOpen ? "" : "-translate-y-96 opacity-0"} flex w-full flex-col items-center py-12 border-b-4 text-center absolute top-20 bg-primaryBg left-0`}>
                         {
-                            navigation.map(nav => (<a href={nav.link} className="text-2xl font-medium text-white my-2 uppercase font-title hover:text-gray-200">
+                            navigation.map(nav => (<a href={nav.link} key={nav.name} className="text-2xl font-medium text-white my-2 uppercase font-title hover:text-gray-200">
                                 {nav.name}
                             </a>))
                         }
@@ -56,18 +57,20 @@ export default function Header() {
 
                     <>
                         {
-                            navigation.map(nav => (<a href={nav.link} className="text-md font-title hidden md:block uppercase text-white hover:text-gray-200">
+                            navigation.map(nav => (<a href={nav.link}  key={nav.name} className="text-md font-title hidden md:block uppercase text-white hover:text-gray-200">
                                 {nav.name}
                             </a>))
                         }
                     </>
                     <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                        <a
-                            href="#contact"
-                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap font-bold rounded-md border border-transparent bg-primaryText px-4 py-2 text-base font-bold text-white shadow-sm hover:bg-indigo-400 font-title tracking-tight uppercase"
-                        >
-                            Get in Touch
-                        </a>
+                        <Section>
+                            <a
+                                href="#contact"
+                                className="ml-8 inline-flex items-center justify-center whitespace-nowrap font-bold rounded-md border border-transparent bg-primaryText px-4 py-2 text-base font-bold text-white shadow-sm hover:bg-indigo-400 font-title tracking-tight uppercase"
+                            >
+                                Get in Touch
+                            </a>
+                        </Section>
                     </div>
                 </div>
             </div>

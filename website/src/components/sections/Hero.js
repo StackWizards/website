@@ -1,5 +1,8 @@
 import { Popover } from '@headlessui/react'
+import { Section } from '../animation/Section'
 
+
+const services = ["✨ MVP Development", "🤖 Business Process Automation", "📱 Mobile App Development", "☁️ Platform Migration & Cloud Services"]
 
 export default function Hero() {
   return (
@@ -33,24 +36,45 @@ export default function Hero() {
 
                   <div className='flex flex-col md:flex-row'>
                     <span className="ml-2 text-primaryText">deliver great ideas.</span>
-                    <div className='flex'><img
-                      className="h-32 w-32 md:-mt-10"
-                      src="/images/wand.svg"
-                      alt=""
-                    />
-                      <div
-                        className="h-12 w-12 bg-white mt-5 ml-4 md:-mt-5 md:ml-4 rounded-full opacity-50 absolute animate-ping"
-                        alt=""
-                      />
-                    </div>
+                    <Section>
+                      <div className='hidden md:block'>
+                        <div className='flex'><img
+                          className="h-32 w-32 md:-mt-10"
+                          src="/images/wand.svg"
+                          alt=""
+                        />
+                          <div
+                            className="h-12 w-12 bg-white mt-5 ml-4 md:-mt-5 md:ml-4 rounded-full opacity-50 absolute animate-ping"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </Section>
+                    <Section>
+                      <div className='md:hidden w-full items-center mx-32 mt-12 -mb-12'>
+                        <div className='flex'><img
+                          className="h-32 w-32 md:-mt-10"
+                          src="/images/wand.svg"
+                          alt=""
+                        />
+                          <div
+                            className="h-12 w-12 bg-white mt-5 ml-4 md:-mt-5 md:ml-4 rounded-full opacity-50 absolute animate-ping"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </Section>
                   </div>
                 </h1>
 
               </div>
 
             </div>
-          </div>
 
+          </div>
+          <Section>
+            <span className="px-12 sm:px-12 mx-auto flex  flex-col my-12 mt-24 text-white items-center text-center w-full opacity-75 select-none">{services.join(" | ")}</span>
+          </Section>
           <div className="relative">
             <div className="absolute inset-0 flex flex-col" aria-hidden="true">
               <div className="flex-1" />
@@ -67,7 +91,7 @@ export default function Hero() {
         </div>
 
       </div >
-      <div class="w-full h-48 hidden sm:block" alt="" style={{
+      <div className="w-full h-48 hidden sm:block" alt="" style={{
         background: "url(/images/vector.svg) center bottom",
         position: "absolute",
 

@@ -62,7 +62,7 @@ export default function Contact() {
                             <div className="mx-auto max-w-md sm:max-w-lg lg:mx-0">
                                 <h2 className="text-3xl font-bold tracking-tight font-title sm:text-4xl">Let's work together!</h2>
                                 <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                                    We’d love to hear from you! <br />Email us at: <a href='mailto:hello@stackwizards.com'><b className='text-xl text-indigo-600 font-title'>hello@stackwizards.com ✉️</b></a>
+                                    We’d love to hear from you! <br />Email us at: <a href='mailto:hello@stackwizards.com'><b className='text-xl text-primaryBg font-title'>hello@stackwizards.com ✉️</b></a>
                                 </p>
                             </div>
                         </div>

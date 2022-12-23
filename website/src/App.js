@@ -7,15 +7,19 @@ import Hero from './components/sections/Hero';
 import Stats from './components/sections/Stats';
 import './index.css';
 
+
 export default function App() {
   return (
     <div className='h-full w-full bg-primaryBg'>
       <Header />
       <Hero />
+
       <Stats />
+
       <MeetUs />
+
       <Contact />
       <Footer />
-    </div>
+    </div >
   )
 }
