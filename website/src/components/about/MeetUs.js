@@ -5,6 +5,7 @@ const people = [
     {
         name: 'Alistair Hey',
         role: 'Co-Founder',
+        email: "alistair.hey@stackwizards.com",
         twitter: "https://twitter.com/alistair_hey",
         linkedIn: "https://www.linkedin.com/in/alistair-hey/",
         imageUrl:
@@ -13,6 +14,7 @@ const people = [
     {
         name: 'Andy Macdonald',
         role: 'Co-Founder',
+        email: "andy.macdonald@stackwizards.com",
         twitter: "https://twitter.com/AndyMacDroo",
         linkedIn: "https://www.linkedin.com/in/andy-j-macdonald/",
         imageUrl:
@@ -44,7 +46,7 @@ export default function MeetUs() {
                                         <Section>
                                             <div className="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-3">
 
-                                                <img className="transition-all rounded-lg hover:scale-90 object-cover shadow-lg grayscale" src={person.imageUrl} alt="" />
+                                                <img className="transition-all rounded-lg  object-cover shadow-lg grayscale" src={person.imageUrl} alt="" />
 
                                             </div>
                                         </Section>
@@ -53,10 +55,11 @@ export default function MeetUs() {
                                                 <div className="space-y-1 font-medium leading-6">
                                                     <h2 className="font-bold text-xl tracking-tight font-title">{person.name}</h2>
                                                     <p className="text-gray-600 tracking-tighter">🧙 {person.role}</p>
+                                                    <a href={`mailto:${person.email}`}><p className="text-primaryBg tracking-tighter mt-2">{person.email}</p></a>
                                                 </div>
                                                 <div className="flex">
-                                                    <SocialIcon className='mr-2' style={{ width: 40, height: 40 }} url={person.twitter} />
-                                                    <SocialIcon style={{ width: 40, height: 40 }} url={person.linkedIn} />
+                                                    <SocialIcon className='transition-all mr-2 hover:scale-90' style={{ width: 40, height: 40 }} url={person.twitter} />
+                                                    <SocialIcon className='transition-all hover:scale-90' style={{ width: 40, height: 40 }} url={person.linkedIn} />
                                                 </div>
                                             </div>
                                         </div>
