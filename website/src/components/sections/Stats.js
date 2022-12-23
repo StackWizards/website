@@ -15,7 +15,7 @@ const sections = [
     {
         header: "Skilled technologists who get behind you and push you forward.",
         icon: "/images/push.svg",
-        text: "15 years+ of software project experience and a network of the best software and platform engineers in the UK."
+        text: "15 years+ of software project experience and access to networks of the best software and platform engineers in the UK."
     },
     {
         header: "Let us work our magic on your next project.",
