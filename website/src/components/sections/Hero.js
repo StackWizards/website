@@ -37,7 +37,7 @@ export default function Hero() {
                   <div className='flex flex-col md:flex-row'>
                     <span className="ml-2 text-primaryText">deliver great ideas.</span>
                     <Section>
-                      <div className='hidden md:block'>
+                      <div className='hidden sm:block'>
                         <div className='flex'><img
                           className="h-32 w-32 md:-mt-10"
                           src="/images/wand.svg"
@@ -51,7 +51,7 @@ export default function Hero() {
                       </div>
                     </Section>
                     <Section>
-                      <div className='md:hidden w-full items-center mx-32 mt-12 -mb-12'>
+                      <div className='sm:hidden w-full items-center mx-32 mt-12 -mb-12'>
                         <div className='flex'><img
                           className="h-32 w-32 md:-mt-10"
                           src="/images/wand.svg"
@@ -72,8 +72,13 @@ export default function Hero() {
             </div>
 
           </div>
+
           <Section>
-            <span className="px-12 sm:px-12 mx-auto flex  flex-col my-12 mt-24 text-white items-center text-center w-full opacity-75 select-none">{services.join(" | ")}</span>
+            <span className="px-12 sm:px-12 mx-auto my-12 mt-20 text-white items-center text-center w-full select-none flex-col inline-flex">
+              <div className='flex-col sm:flex-row sm:inline-flex justify-center items-center'>
+                {services.map((service, index) => <div className='md:inline-flex tracking-tight justify-center items-center'>{service}{index !== services.length - 1 ? <i className='hidden md:block not-italic mx-2 text-4xl'> | </i> : null}</div>)}
+              </div>
+            </span>
           </Section>
           <div className="relative">
             <div className="absolute inset-0 flex flex-col" aria-hidden="true">
