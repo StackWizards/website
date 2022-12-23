@@ -33,8 +33,8 @@ export default function MeetUs() {
                         <div className="text-lg">
 
                             <p className="text-gray-700 tracking-tight">A team of <b className="font-semibold">expert software engineers 🔧</b> who are obsessed with:
-                                <li className="mt-5 md:mt-2">delivering high-quality software with speed 🏎️</li>
-                                <li>building amazing things with technology 💥</li></p>
+                                <li className="mt-5 md:mt-2">delivering high-quality software with speed</li>
+                                <li>building amazing things with technology</li></p>
 
                         </div>
                         <ul
