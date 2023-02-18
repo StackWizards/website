@@ -12,6 +12,8 @@ const people = [
         email: "alistair.hey@stackwizards.com",
         twitter: "https://twitter.com/alistair_hey",
         linkedIn: "https://www.linkedin.com/in/alistair-hey/",
+        github: "https://github.com/Waterdrips",
+        blog: "https://blog.heyal.co.uk/",
         imageUrl:
             alistair,
     },
@@ -21,6 +23,8 @@ const people = [
         email: "andy.macdonald@stackwizards.com",
         twitter: "https://twitter.com/AndyMacDroo",
         linkedIn: "https://www.linkedin.com/in/andy-j-macdonald/",
+        github: "https://github.com/AndyMacDroo",
+        medium: "https://medium.com/@AndyMacDroo",
         imageUrl:
             andy,
     },
@@ -61,7 +65,10 @@ export function MeetUs() {
                                                 </div>
                                                 <div className="flex">
                                                     <SocialIcon bgColor='black' className='transition-all mr-2 hover:scale-90' style={{ width: 30, height: 30 }} url={person.twitter} />
-                                                    <SocialIcon bgColor='black' className='transition-all hover:scale-90' style={{ width: 30, height: 30 }} url={person.linkedIn} />
+                                                    <SocialIcon bgColor='black' className='transition-all mr-2 hover:scale-90' style={{ width: 30, height: 30 }} url={person.linkedIn} />
+                                                    <SocialIcon bgColor='black' className='transition-all mr-2 hover:scale-90' style={{ width: 30, height: 30 }} url={person.github} />
+                                                   {person.medium ? <SocialIcon bgColor='black' className='transition-all mr-2 hover:scale-90' style={{ width: 30, height: 30 }} url={person.medium} /> : null }
+                                                   {person.blog ? <SocialIcon bgColor='black' className='transition-all mr-2 hover:scale-90' style={{ width: 30, height: 30 }} url={person.blog} /> : null }
                                                 </div>
                                             </div>
                                         </div>
