@@ -6,6 +6,8 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import menu from '@/images/icons/menu.svg';
+import Image from 'next/image';
 
 function MobileNavLink({ href, children }) {
   return (
@@ -17,7 +19,7 @@ function MobileNavLink({ href, children }) {
 
 function MobileNavIcon({ open }) {
   return (
-    <div />
+    <Image className='transition-all h-24 md:h-28 lg:h-32' src={menu} alt={"Menu"} unoptimized />
   )
 }
 
@@ -25,7 +27,7 @@ function MobileNavigation() {
   return (
     <Popover>
       <Popover.Button
-        className="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
+        className="relative z-10 flex h-8 w-8 items-center justify-center"
         aria-label="Toggle Navigation"
       >
         {({ open }) => <MobileNavIcon open={open} />}
@@ -80,14 +82,15 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
+
+            <div className="-mr-1 md:hidden">
+              <MobileNavigation />
+            </div>
             <Button href="mailto:hello@stackwizards.com" color="teal">
               <span>
                 Talk to Us!
               </span>
             </Button>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
           </div>
         </nav>
       </Container>

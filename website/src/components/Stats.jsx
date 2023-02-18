@@ -33,8 +33,8 @@ const sections = [
 export default function Stats() {
     return (
         <>
-            <div  id="what" className="py-24 relative bg-teal-100 font-display">
-           
+            <div id="what" className="py-24 relative bg-teal-100 font-display">
+
                 <div className="px-4 lg:max-w-7xl lg:px-8  mx-auto">
                     <h2 className="text-center md:text-left text-3xl font-bold tracking-tight sm:text-3xl font-title">What Can We Do?</h2>
                     <div className="mx-auto py-10 grid grid-cols-1 md:grid-cols-2 mx-5 md:mx-0 gap-x-24">
@@ -63,14 +63,7 @@ export default function Stats() {
                 </div>
 
             </div>
-            <div className="w-full h-48 hidden md:block" alt="" style={{
-                background: "url(/images/vector2.svg) center bottom",
-                position: "absolute",
-                zIndex: 9999999,
-                border: 0,
-                width: "100%",
-                backgroundSize: "150%"
-            }}></div>
+
 
         </>
     )

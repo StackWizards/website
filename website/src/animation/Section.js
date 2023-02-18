@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const sectionVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.2 } },
     hidden: { opacity: 0, scale: 0 }
 };
 
