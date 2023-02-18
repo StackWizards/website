@@ -4,10 +4,7 @@ const nextConfig = {
   assetPrefix: './',
   images: {
     unoptimized: true
-  },
-  experimental: {
-    scrollRestoration: true,
-  },
+  }
 }
 
 module.exports = nextConfig
