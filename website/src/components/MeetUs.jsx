@@ -42,7 +42,7 @@ export function MeetUs() {
 
                         </div>
                         <div
-                            className="space-y-12 lg:grid lg:grid-cols-2 lg:items-center"
+                            className="flex w-full flex-col md:flex-row justify-center gap-y-10 gap-x-48 items-center"
                         >
                             {people.map((person) => (
                                 <div className='flex items-center justify-center' key={person.name}>
