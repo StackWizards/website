@@ -47,7 +47,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
-            <SocialIcon bgColor='black' className='transition-all mr-2 hover:scale-90' style={{ width: 30, height: 30 }} url={"https://twitter.com/thestackwizards"} />
+            <SocialIcon bgColor='black' className='transition-all hover:scale-90' style={{ width: 30, height: 30 }} url={"https://twitter.com/thestackwizards"} />
             <SocialIcon bgColor='black' className='transition-all hover:scale-90' style={{ width: 30, height: 30 }} url={"https://www.linkedin.com/company/stackwizards"} />
             <SocialIcon bgColor='black' className='transition-all hover:scale-90' style={{ width: 30, height: 30 }} url={"https://www.instagram.com/stackwizards/"} />
           </div>
