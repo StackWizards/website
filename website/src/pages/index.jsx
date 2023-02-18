@@ -17,7 +17,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <main>
+      <main className='bg-teal-100'>
         <Hero />
         
         <MeetUs />
