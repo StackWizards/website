@@ -13,7 +13,7 @@ export default function Home() {
         <title>StackWizards - Your good ideas in safe hands</title>
         <meta
           name="description"
-          content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
+          content="StackWizards is a software engineering consultancy with a mission - to help you deliver your great ideas."
         />
       </Head>
       <Header />
