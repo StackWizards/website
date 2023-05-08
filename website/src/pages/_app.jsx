@@ -1,6 +1,19 @@
-import 'focus-visible'
-import '@/styles/tailwind.css'
+import { useEffect, useRef } from 'react'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import '@/styles/tailwind.css'
+import 'focus-visible'
+
+function usePrevious(value) {
+  let ref = useRef()
+
+  useEffect(() => {
+    ref.current = value
+  }, [value])
+
+  return ref.current
+}
+
+export default function App({ Component, pageProps, router }) {
+  let previousPathname = usePrevious(router.pathname)
+  return <Component {...pageProps} previousPathName={previousPathname} />
 }

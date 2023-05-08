@@ -59,6 +59,7 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#who">Who Are We</MobileNavLink>
             <MobileNavLink href="#what">What Can We Do</MobileNavLink>
+            <MobileNavLink href="/blog">Blog</MobileNavLink>
 
           </Popover.Panel>
         </Transition.Child>
@@ -73,12 +74,13 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#who">Who Are We</NavLink>
               <NavLink href="#what">What Can We Do</NavLink>
+              <NavLink href="/blog">Blog</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
