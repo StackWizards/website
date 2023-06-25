@@ -21,8 +21,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.13.x
-          cache: npm
-          cache-dependency-path: website/package-lock.json
+          cache: yarn
+          cache-dependency-path: website/yarn.lock
       - name: Install
         run: npm install
       - run : git config user.email github-actions@github.com
