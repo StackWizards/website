@@ -7,48 +7,48 @@ import { WhatsAppButton } from './WhatsappButton';
 const choices = [
   {
     id: "scalingStartup",
-    name: "Scaling Startup",
+    name: "A Scaling Startup",
     strengths: [
       "Innovative and disruptive ideas",
-      "Agile and adaptable to market changes",
-      "Strong focus on scalability and growth"
+      "Agile, adaptable and lean",
+      "Focused on scalable growth"
     ],
     issues: [
-      "Struggling to succeed?",
-      "Have a killer concept but can't deliver it?",
-      "Need a trustworthy tech partner?"
+      "Struggling to achieve success?",
+      "Killer concept, can't deliver it?",
+      "Ambitious goals, limited budget?"
     ],
     image: "/images/scaling_startup.png",
     hoverImage: "/images/scaling_startup_trouble.png"
   },
   {
     "id": "creativeAgency",
-    "name": "Creative Agency",
+    "name": "A Creative Agency",
     "strengths": [
-      "A talented creative team",
+      "Highly talented creative team",
       "Proven track record of successful campaigns",
-      "Innovative and forward-thinking approach"
+      "Embrace innovative and forward-thinking approaches"
     ],
     "issues": [
-      "Want to expand service offering?",
-      "Struggling to understand tech?",
-      "Need a trustworthy tech partner?"
+      "Eager to expand service offerings?",
+      "Navigating tech complexities?",
+      "Seeking a reliable tech partner?"
     ],
     "image": "/images/creative_agency.png",
     "hoverImage": "/images/creative_agency_trouble.png"
   },
   {
     id: "boomingBusiness",
-    name: "Booming Business",
+    name: "A Booming Business",
     strengths: [
-      "An established brand and customer base",
-      "Product market fit",
-      "An experienced leadership team"
+      "Established brand with loyal customer base",
+      "Aligned with market demands",
+      "Experienced and visionary leadership"
     ],
     issues: [
-      "Feeling organisational growing pains?",
+      "Experiencing growing pains?",
       "Drowning in spreadsheets?",
-      "Everything is firefighting?"
+      "Constantly firefighting?"
     ],
     image: "/images/booming_business.png",
     hoverImage: "/images/booming_business_trouble.png"
