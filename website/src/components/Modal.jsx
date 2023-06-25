@@ -29,13 +29,13 @@ export function Modal({ onClose = () => { }, children }) {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div ref={modalRef} className="bg-white rounded-lg mx-12 flex items-center justify-center">
+            <div ref={modalRef} className="bg-white relative rounded-lg mx-6 flex items-center justify-center">
                 <button
-                    className="absolute top-0 right-0 text-gray-500 hover:text-gray-700 focus:outline-none"
+                    className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 focus:outline-none"
                     onClick={handleClose}
                 >
                     <svg
-                        className="w-6 h-6"
+                        className="w-8 h-8"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

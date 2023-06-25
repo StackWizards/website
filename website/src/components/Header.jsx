@@ -27,7 +27,7 @@ function MobileNavigation() {
   return (
     <Popover>
       <Popover.Button
-        className="relative z-10 flex h-8 w-8 items-center justify-center"
+        className="relative z-10 flex h-6 w-6 items-center justify-center"
         aria-label="Toggle Navigation"
       >
         {({ open }) => <MobileNavIcon open={open} />}
@@ -68,11 +68,12 @@ function MobileNavigation() {
   )
 }
 
+
 export function Header() {
   return (
     <header className="py-5">
       <Container>
-        <nav className="relative w-full z-50 flex justify-evenly lg:justify-between">
+        <nav className="relative w-full z-50 flex justify-around lg:justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" aria-label="Home">
               <Logo className="h-5 w-auto" />

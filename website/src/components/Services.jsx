@@ -11,8 +11,8 @@ const services = [
     description: `
       We specialize in developing high-quality and scalable applications for web, mobile, and desktop platforms. Our team of experienced developers will work closely with you to understand your requirements and deliver custom solutions tailored to your business needs.
     `,
-    image: '/images/mobile_app_dev.png',
-    hoverImage: '/images/mobile_app_dev_alt.png',
+    image: '/images/mobile_app_dev_alt.png',
+    hoverImage: '/images/mobile_app_dev.png',
   },
   {
     id: 'cloudEngineering',
@@ -58,7 +58,7 @@ export function Services() {
         />
         <h4
           style={isHovered ? { backgroundColor: 'black' } : { backgroundColor: 'rgba(0,0,0,0.8)' }}
-          className="text-3xl lg:text-xl transition-all px-2 py-3 lg:leading-10 tracking-tighter uppercase mb-3 font-bold font-display text-white"
+          className="text-xl lg:text-xl transition-all px-2 py-3 lg:leading-10 tracking-tighter uppercase mb-3 font-bold font-display text-white"
         >
           {service.name}
         </h4>
@@ -87,9 +87,9 @@ export function Services() {
       </Section>
       {selectedService && (
         <Modal onClose={() => setSelectedService(null)}>
-          <div id="why" className="flex flex-col justify-evenly gap-x-10 gap-y-10 py-10 lg:flex-row items-center px-2 mx-2">
-            <div className="lg:w-1/2 flex items-start flex-col mx-12">
-              <h2 className="text-3xl text-left font-display tracking-tight font-bold mb-4">
+          <div id="why" className="flex flex-col justify-evenly gap-x-10 gap-y-10 py-10 lg:flex-row items-center px-6">
+            <div className="lg:w-1/2 flex items-start flex-col">
+              <h2 className="text-xl lg:text-3xl text-left font-display tracking-tight font-bold mb-4">
                 {services.find((service) => service.id === selectedService)?.name}
               </h2>
               <div

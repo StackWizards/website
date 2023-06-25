@@ -54,7 +54,7 @@ export function BlogLayout({
                         )}
                         <article>
                             <header className="flex flex-col">
-                                <h1 className="mt-6 text-4xl font-bold tracking-tight text-black sm:text-5xl">
+                                <h1 className="mt-20 lg:mt-6 text-4xl font-bold tracking-tight text-black sm:text-5xl">
                                     {meta.title}
                                 </h1>
                                 <time
@@ -65,7 +65,7 @@ export function BlogLayout({
                                     <span className="ml-3">{formatDate(meta.date)}</span>
                                 </time>
                             </header>
-                            <Prose className="mt-48">{children}</Prose>
+                            <Prose className="lg:mt-48">{children}</Prose>
                         </article>
                     </div>
                 </div>

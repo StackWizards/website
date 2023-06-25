@@ -33,7 +33,7 @@ export default function Home() {
         <WhatDoWeDo />
         <Services />
         <Stats />
-        <div className='h-2'  id="who"  />
+        <div  id="who"  />
         <MeetUs />
         <div className='relative'>
           <AbstractWavyBackground upsideDown className='bottom-12' />

@@ -3,14 +3,20 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const sectionVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.2 } },
-    hidden: { opacity: 0, scale: 0 }
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: { duration: 0.2 }
+    },
+    hidden: {
+        opacity: 0, scale: 0
+    }
 };
 
 export const Section = ({ children }) => {
 
     const control = useAnimation();
-    const [ref, inView] = useInView();
+    const [ref, inView] = useInView({ threshold: 0 });
 
     useEffect(() => {
         if (inView) {
@@ -20,15 +26,17 @@ export const Section = ({ children }) => {
         }
     }, [control, inView]);
 
-    return (
+    return (<div ref={ref}>
         <motion.div
             className="section"
-            ref={ref}
             variants={sectionVariant}
             initial="hidden"
             animate={control}
         >
-            {children}
+            <div >
+                {children}
+            </div>
         </motion.div>
+    </div>
     );
 };

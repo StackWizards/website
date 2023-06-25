@@ -119,9 +119,9 @@ export function WhyChooseStackWizards({ selectedChoice }) {
 
     return (
       <>
-        <div id="why" className="flex flex-col justify-evenly gap-x-10 gap-y-10 lg:flex-row items-center mx-2">
+        <div id="why" className="flex flex-col justify-evenly gap-x-10 gap-y-10 lg:flex-row items-center">
           <div className="lg:w-1/2 flex items-start flex-col">
-            <h2 className="text-3xl text-left font-display tracking-tight font-bold mb-4">{choice.title}</h2>
+            <h2 className="text-xl lg:text-3xl text-left font-display tracking-tight font-bold mb-4">{choice.title}</h2>
             <div
               className="text-gray-700 text-left leading-relaxed"
               dangerouslySetInnerHTML={{ __html: choice.description }}
@@ -138,7 +138,7 @@ export function WhyChooseStackWizards({ selectedChoice }) {
 
   return (
     <div className="my-12">
-      <div className="w-full px-4">{selectedChoice && renderContent()}</div>
+      <div className="w-full px-6">{selectedChoice && renderContent()}</div>
     </div>
   );
 }
@@ -168,8 +168,8 @@ export function WhoChoice() {
           alt={choice.name}
           className={`w-full h-[300px] object-cover  shadow-full transition-all`}
         />
-        <h4 style={isHovered ? { backgroundColor: "black" } : { backgroundColor: "rgba(0,0,0,0.8)" }} className={`text-3xl lg:text-xl transition-all px-2 py-3 lg:leading-10 tracking-tighter uppercase mb-3 font-bold font-display text-white`}>{choice.name}</h4>
-        <ul className="text-left leading-snug text-base font-display list-disc px-6 ml-2 pb-4 text-black">
+        <h4 style={isHovered ? { backgroundColor: "black" } : { backgroundColor: "rgba(0,0,0,0.8)" }} className={`text-xl lg:text-xl transition-all px-2 py-3 lg:leading-10 tracking-tighter uppercase mb-3 font-bold font-display text-white`}>{choice.name}</h4>
+        <ul className="text-left hidden lg:block leading-snug text-base font-display list-disc px-6 ml-2 pb-4 text-black">
           {isHovered
             ? choice.issues.map((issue, index) => (
               <li

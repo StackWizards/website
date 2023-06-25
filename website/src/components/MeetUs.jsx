@@ -32,7 +32,7 @@ const people = [
 export function MeetUs() {
     return (
         <Container>
-            <div className="font-display my-24">
+            <div className="font-display my-10">
                 <Section>
                     <div className="mx-4">
                         <div className='space-y-4 tracking-tighter '>
@@ -40,7 +40,7 @@ export function MeetUs() {
                                 Who Are We?
                             </h2>
                             <p className='text-lg'>A team of expert software engineers 🔧 who are obsessed with:</p>
-                            <ul style={{ marginTop: 10 }}>
+                            <ul className='text-lg' style={{ marginTop: 10 }}>
                                 <li>delivering high-quality software with speed</li>
                                 <li>building amazing things with technology</li>
                             </ul>
