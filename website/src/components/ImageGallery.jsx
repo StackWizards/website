@@ -10,7 +10,7 @@ const ImageGallery = ({ images }) => {
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
             <Masonry columnsCount={3} gutter={4}>
                 {images.map((image) => (
-                    <img className='grayscale hover:grayscale-0' src={image.src} style={{ width: "100%", display: "block" }} />
+                    <img key={image.src} className='grayscale hover:grayscale-0' src={image.src} style={{ width: "100%", display: "block" }} />
                 ))}
             </Masonry>
         </ResponsiveMasonry>
