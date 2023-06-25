@@ -27,7 +27,7 @@ const choices = [
     "strengths": [
       "Highly talented creative team",
       "Proven track record of successful campaigns",
-      "Embrace innovative and forward-thinking approaches"
+      "Innovative and forward-thinking"
     ],
     "issues": [
       "Eager to expand service offerings?",
