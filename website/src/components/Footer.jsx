@@ -16,22 +16,6 @@ export function Footer() {
     <footer className="bg-slate-50">
       <Container>
         <div className="py-12">
-          <div className='w-full mb-10 flex flex-col justify-center items-center'>
-            <h2 className="text-center md:text-left text-3xl font-display font-bold tracking-tight sm:text-3xl font-title">Want to talk?</h2>
-            <div className='flex flex-col md:flex-row mt-5 items-center justify-between gap-y-3 gap-x-6'>
-              <Button color="teal" onClick={() => {
-                theWindow?.Calendly.initPopupWidget({ url: 'https://calendly.com/stackwizards/30min' });
-              }}>
-                Book a 30 minute meeting
-              </Button>
-              <p className='font-display font-bold text-xl'>OR</p>
-              <Button href="mailto:hello@stackwizards.com" color="teal">
-                <span>
-                  Email: hello@stackwizards.com
-                </span>
-              </Button>
-            </div>
-          </div>
           <Logo className="mx-auto h-10 w-auto" />
           <p className='mt-10 font-display'>
             StackWizards Technology Ltd.

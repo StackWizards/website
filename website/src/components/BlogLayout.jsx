@@ -35,7 +35,7 @@ export function BlogLayout({
     return (
         <>
             <Head>
-                <title>{`${meta.title} - TechMids`}</title>
+                <title>{`${meta.title}`}</title>
                 <meta name="description" content={meta.description} />
             </Head>
             <Header />
@@ -65,7 +65,7 @@ export function BlogLayout({
                                     <span className="ml-3">{formatDate(meta.date)}</span>
                                 </time>
                             </header>
-                            <Prose className="mt-8">{children}</Prose>
+                            <Prose className="mt-48">{children}</Prose>
                         </article>
                     </div>
                 </div>

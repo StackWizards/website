@@ -8,6 +8,7 @@ import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import menu from '@/images/icons/menu.svg';
 import Image from 'next/image';
+import { WhatsAppButton } from './WhatsappButton'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -70,16 +71,18 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-10">
+    <header className="py-5">
       <Container>
-        <nav className="relative z-50 flex justify-between">
+        <nav className="relative w-full z-50 flex justify-evenly lg:justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <Logo className="h-5 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#who">Who Are We</NavLink>
-              <NavLink href="#what">What Can We Do</NavLink>
+              <NavLink href="/#you">Who Are You</NavLink>
+              <NavLink href="/#what">What Can We Do</NavLink>
+              <NavLink href="/#who">Who Are We</NavLink>
+
               <NavLink href="/blog">Blog</NavLink>
             </div>
           </div>
@@ -88,11 +91,7 @@ export function Header() {
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
-            <Button href="mailto:hello@stackwizards.com" color="teal">
-              <span>
-                Talk to Us!
-              </span>
-            </Button>
+            <WhatsAppButton phoneNumber={"07956000356"} message={`I want to talk about my project`} />
           </div>
         </nav>
       </Container>

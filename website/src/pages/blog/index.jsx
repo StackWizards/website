@@ -46,10 +46,9 @@ export default function ArticlesIndex({ articles }) {
                 />
             </Head>
             <Header />
-            <main className='bg-teal-100'>
+            <main>
             <SimpleLayout
                 title="Latest news, updates, thoughts and more"
-                intro="Keep up to date with the latest news, updates and thoughts from StackWizards."
             >
                 <div className="md:border-l md:border-black md:pl-6">
                     <div className="flex max-w-3xl flex-col space-y-16">

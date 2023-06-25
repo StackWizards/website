@@ -5,3 +5,11 @@
 #__next {
   min-height: 100%;
 }
+
+ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style: disc;
+  margin-left: 20px;
+}
+

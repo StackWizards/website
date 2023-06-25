@@ -33,11 +33,10 @@ const sections = [
 export default function Stats() {
     return (
         <>
-            <div id="what" className="py-24 relative bg-teal-100 font-display">
+            <div className="relative">
 
-                <div className="px-4 lg:max-w-7xl lg:px-8  mx-auto">
-                    <h2 className="text-center md:text-left text-3xl font-bold tracking-tight sm:text-3xl font-title">What Can We Do?</h2>
-                    <div className="mx-auto py-10 grid grid-cols-1 md:grid-cols-2 mx-5 md:mx-0 gap-x-24">
+                <div className="px-4 lg:max-w-7xl lg:px-10  mx-auto">
+                    <div className="mx-auto grid grid-cols-1 md:grid-cols-2 mx-5 md:mx-0 gap-x-24">
                         {sections.map(({ header, icon, text }) =>
 
 
@@ -45,11 +44,11 @@ export default function Stats() {
                                 <Section>
                                     <div className="inline-flex flex-col items-center">
                                         <Image className='h-10 md:h-12 md:w-12 mx-2 grayscale' src={icon} alt={"Icon"} unoptimized />
-                                        <h3 className="mt-3 text-xl md:text-2xl font-title text-teal-600 tracking-tight">
+                                        <h3 className="mt-3 w-full text-xl md:text-xl font-display font-medium tracking-tight">
                                             {header}
                                         </h3>
                                         <Section>
-                                            <p className="mt-5 text-lg md:text-lg tracking-tight text-slate-900">
+                                            <p className="mt-5 text-lg md:text-lg font-display tracking-tighter text-slate-900">
                                                 {text}
                                             </p>
                                         </Section>

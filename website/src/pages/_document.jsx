@@ -1,11 +1,25 @@
-import { Head, Html, Main, NextScript } from 'next/document'
+import { AbstractWavyBackground } from '@/components/Svg/WavyBackground';
+import { Head, Html, Main, NextScript } from 'next/document';
+
+
 
 export default function Document(props) {
-  let pageProps = props.__NEXT_DATA__?.props?.pageProps
+  const markup = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "StackWizards",
+    "url": "https://www.stackwizards.com",
+    "logo": "https://www.stackwizards.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/stackwizards",
+      "https://www.linkedin.com/company/stackwizards",
+      "https://github.com/stackwizards"
+    ]
+  }
 
   return (
     <Html
-      className="h-full scroll-smooth bg-teal-100 antialiased [font-feature-settings:'ss01']"
+      className="h-full bg-white scroll-smooth antialiased [font-feature-settings:'ss01']"
       lang="en"
     >
       <Head>
@@ -21,8 +35,13 @@ export default function Document(props) {
         />
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify(markup)
+        }} />
       </Head>
-      <body className="bg-teal-100 flex h-full flex-col">
+      <AbstractWavyBackground />
+
+      <body className="flex h-full flex-col">
         <Main />
         <NextScript />
       </body>
