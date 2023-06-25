@@ -2,12 +2,11 @@ import { Popover, Transition } from '@headlessui/react'
 import Link from 'next/link'
 import { Fragment } from 'react'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
-import menu from '@/images/icons/menu.svg';
-import Image from 'next/image';
+import menu from '@/images/icons/menu.svg'
+import Image from 'next/image'
 import { WhatsAppButton } from './WhatsappButton'
 
 function MobileNavLink({ href, children }) {
@@ -58,10 +57,10 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#who">Who Are We</MobileNavLink>
-            <MobileNavLink href="#what">What Can We Do</MobileNavLink>
+            <MobileNavLink href="/#you">Who Are You</MobileNavLink>
+            <MobileNavLink href="/#what">What Can We Do</MobileNavLink>
+            <MobileNavLink href="/#who">Who Are We</MobileNavLink>
             <MobileNavLink href="/blog">Blog</MobileNavLink>
-
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
