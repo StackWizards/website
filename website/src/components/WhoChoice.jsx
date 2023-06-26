@@ -31,7 +31,7 @@ const choices = [
     ],
     "issues": [
       "Eager to expand service offerings?",
-      "Navigating tech complexities?",
+      "Struggling with tech complexities?",
       "Seeking a reliable tech partner?"
     ],
     "image": "/images/creative_agency.png",
