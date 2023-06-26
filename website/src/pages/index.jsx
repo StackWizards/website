@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </main>
 
-      <div className='relative'>
+      <div className='relative mt-24'>
         <AbstractWavyBackground upsideDown className='bottom-72' tailwindColour='bg-slate-50 h-64' colour='#f8fafc' />
         <Footer />
       </div>
