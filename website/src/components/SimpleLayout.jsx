@@ -4,7 +4,7 @@ export function SimpleLayout({ title, children }) {
     return (
         <Container>
             <header>
-                <h1 className="font-display px-10 text-center transition-all w-full pt-24 lg:pt-0 text-3xl lg:text-5xl font-bold tracking-tight text-black sm:text-5xl">
+                <h1 className="font-display px-10 text-center transition-all w-full pt-24 lg:pt-0 text-3xl lg:text-5xl tracking-tight text-black sm:text-5xl">
                     {title}
                 </h1>
             </header>
