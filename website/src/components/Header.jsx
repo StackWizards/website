@@ -91,7 +91,7 @@ export function Header() {
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
-            <WhatsAppButton phoneNumber={"07956000356"} message={`I want to talk about my project`} />
+            <WhatsAppButton phoneNumber={"+447956000356"} message={`I want to talk about my project`} />
           </div>
         </nav>
       </Container>

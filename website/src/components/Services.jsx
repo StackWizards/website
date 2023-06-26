@@ -100,7 +100,7 @@ export function Services() {
               ></div>
               <div className="my-5">
                 <WhatsAppButton
-                  phoneNumber="07956000356"
+                  phoneNumber="+447956000356"
                   message={`I want to see how StackWizards can help with ${services.find((service) => service.id === selectedService)?.name}`}
                 />
               </div>

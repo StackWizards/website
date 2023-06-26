@@ -130,7 +130,7 @@ export function WhyChooseStackWizards({ selectedChoice }) {
           <img style={{ borderTopRightRadius: 2000 }} src={choice.image} alt={selectedChoice} className="hidden lg:block rounded-tl-full rounded-b-full h-[380px]" />
         </div>
         <div className='my-5'>
-          <WhatsAppButton phoneNumber={"07956000356"} message={`I want to see how StackWizards can help with my ${choice.name}`} />
+          <WhatsAppButton phoneNumber={"+447956000356"} message={`I want to see how StackWizards can help with my ${choice.name}`} />
         </div>
       </>
     );
