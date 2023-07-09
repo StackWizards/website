@@ -18,7 +18,7 @@ const sections = [
         text: "Life is short, let us help automate the boring stuff so you can focus on what makes your business special."
     },
     {
-        header: "Skilled technologists who get behind you and push you forward.",
+        header: "We get behind you and push you forward.",
         icon: push,
         text: "15 years+ of software project experience and access to networks of the best software and platform engineers in the UK."
     },

@@ -32,7 +32,7 @@ const people = [
 export function MeetUs() {
     return (
         <Container>
-            <div className="font-display my-10">
+            <div className="font-display my-10 mb-80 lg:mb-0">
                 <Section>
                     <div className="mx-4">
                         <div className='space-y-4 tracking-tighter '>
@@ -53,7 +53,7 @@ export function MeetUs() {
                                     { src: "/images/gallery/jw.png" },
                                     { src: "/images/gallery/north.png" },
                                     { src: "/images/gallery/open.png" },
-                           
+
                                 ]
                                 } />
                             <div className='h-2' />
@@ -61,16 +61,15 @@ export function MeetUs() {
                                 {people.map((person) => (
                                     <div key={person.name} className="flex items-center justify-center">
                                         <div className="space-y-4 flex flex-col items-center justify-center">
-                                            <div className="h-48 w-48 my-5">
+                                            <div className="transition-all h-80 w-80 lg:h-48 lg:w-48 my-2">
                                                 <Image
-                                                    style={{ borderTopLeftRadius: 2000, borderTopRightRadius: 1200, borderBottomLeftRadius: 3000, borderBottomRightRadius: 3000 }}
-                                                    className="transition-all rounded-lg border-2 border-slate-900 grayscale"
+                                                    className="transition-all h-80 w-80 lg:h-48 lg:w-48 rounded-lg border-2 border-slate-900 grayscale"
                                                     src={person.imageUrl}
                                                     alt="Avatar"
                                                     unoptimized
                                                 />
                                             </div>
-                                            <div className="sm:col-span-2">
+                                            <div className="lg:w-48 sm:col-span-2">
                                                 <div className="space-y-4">
                                                     <div className="space-y-1 text-left font-medium leading-6">
                                                         <h2 className="font-medium text-xl tracking-tight font-title">

@@ -25,7 +25,7 @@ export default function Home() {
       <main className='transition-all'>
         <Hero />
 
-        <div className='transition-all h-0 lg:h-32' id="you" />
+        <div className='transition-all h-0 h-6 xl:h-32' id="you" />
         <WhoAreYou />
         <div className='h-2'   />
         <WhoChoice />
@@ -40,8 +40,8 @@ export default function Home() {
         </div>
       </main>
 
-      <div className='relative mt-24'>
-        <AbstractWavyBackground upsideDown className='bottom-72' tailwindColour='bg-slate-50 h-64' colour='#f8fafc' />
+      <div className='relative'>
+        <AbstractWavyBackground upsideDown className='bottom-80' tailwindColour='bg-slate-50 h-64' colour='#f8fafc' />
         <Footer />
       </div>
     </>

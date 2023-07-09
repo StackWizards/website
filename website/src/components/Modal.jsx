@@ -29,7 +29,7 @@ export function Modal({ onClose = () => { }, children }) {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div ref={modalRef} className="bg-white relative rounded-lg mx-6 flex items-center justify-center">
+            <div ref={modalRef} className="bg-white w-[100%] xl:w-[75%] relative rounded-lg mx-6 flex items-center justify-center">
                 <button
                     className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 focus:outline-none"
                     onClick={handleClose}
@@ -49,7 +49,7 @@ export function Modal({ onClose = () => { }, children }) {
                         />
                     </svg>
                 </button>
-                <div className='max-h-[700px] overflow-y-scroll'>
+                <div className='max-h-[700px] w-[100%] overflow-y-scroll'>
                     {children}
                 </div>
             </div>

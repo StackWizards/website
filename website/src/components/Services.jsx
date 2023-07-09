@@ -87,7 +87,7 @@ export function Services() {
       </Section>
       {selectedService && (
         <Modal onClose={() => setSelectedService(null)}>
-          <div id="why" className="flex flex-col justify-evenly gap-x-10 gap-y-10 py-10 lg:flex-row items-center px-6">
+          <div id="why" className="flex flex-col justify-between gap-x-2 gap-y-10 py-10 lg:flex-row items-center px-10">
             <div className="lg:w-1/2 flex items-start flex-col">
               <h2 className="text-xl lg:text-3xl text-left font-display tracking-tight font-bold mb-4">
                 {services.find((service) => service.id === selectedService)?.name}

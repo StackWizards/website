@@ -15,7 +15,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-50">
       <Container>
-        <div className="py-12">
+        <div className="py-12 px-12">
           <Logo className="mx-auto h-10 w-auto" />
           <p className='mt-10 font-display'>
             StackWizards Technology Ltd.
@@ -35,7 +35,7 @@ export function Footer() {
             <SocialIcon bgColor='black' className='transition-all hover:scale-90' style={{ width: 30, height: 30 }} url={"https://www.linkedin.com/company/stackwizards"} />
             <SocialIcon bgColor='black' className='transition-all hover:scale-90' style={{ width: 30, height: 30 }} url={"https://www.instagram.com/stackwizards/"} />
           </div>
-          <p className="mt-6 text-sm text-slate-500 sm:mt-0">
+          <p className="px-10 text-center mt-6 text-sm text-slate-500 sm:mt-0">
             Copyright &copy; {new Date().getFullYear()} StackWizards Technology Ltd. All rights
             reserved.
           </p>
