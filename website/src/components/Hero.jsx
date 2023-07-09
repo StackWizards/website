@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <Container className="py-16 pb-5 xl:pb-16 transition-all relative text-center">
       <Section>
-        <h1 className="mx-24 lg:mx-auto transition-all mt-24 sm:mt-32 lg:mt-48 xl:mt-0 max-w-4xl font-display relative text-4xl font-medium tracking-tighter text-slate-900 sm:text-5xl">
+        <h1 className="mx-12 lg:mx-24 lg:mx-auto transition-all mt-24 sm:mt-32 lg:mt-48 xl:mt-0 max-w-4xl font-display relative text-4xl font-medium tracking-tighter text-slate-900 sm:text-5xl">
           <i className='not-italic font-light'>Hi, we are</i> the StackWizards 👋,
         </h1>
 
