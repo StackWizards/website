@@ -36,18 +36,18 @@ export default function Contact() {
                     We help companies and individuals build out their brand guidelines.
                 </p>
                 <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
-                    <form action="#" method="POST" className="lg:flex-auto">
+                    <form action="/api/contact/submit" method="POST" className="lg:flex-auto">
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
-                                <label htmlFor="first-name"
+                                <label htmlFor="firstName"
                                        className="block text-sm font-semibold leading-6 text-gray-900">
                                     First name *
                                 </label>
                                 <div className="mt-2.5">
                                     <input
                                         type="text"
-                                        name="first-name"
-                                        id="first-name"
+                                        name="firstName"
+                                        id="firstName"
                                         autoComplete="given-name"
                                         required={true}
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6"
@@ -55,15 +55,15 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="last-name"
+                                <label htmlFor="lastName"
                                        className="block text-sm font-semibold leading-6 text-gray-900">
                                     Last name *
                                 </label>
                                 <div className="mt-2.5">
                                     <input
                                         type="text"
-                                        name="last-name"
-                                        id="last-name"
+                                        name="lastName"
+                                        id="lastName"
                                         autoComplete="family-name"
                                         required={true}
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6"
@@ -90,7 +90,7 @@ export default function Contact() {
                                 </label>
                                 <div className="mt-2.5">
                                     <input
-                                        type="url"
+                                        type="text"
                                         name="website"
                                         id="website"
                                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6"

@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Log in to DigitalOcean Container Registry with short-lived credentials
+        run: doctl registry login --expiry-seconds 1200
+      - name: Push image to DigitalOcean Container Registry
+        env:
+          REPOSITORY: stackwizards}
+          DO_REPOSITORY: registry.digitalocean.com/moksha-production/stackwizards
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./website
+          docker tag $REGISTRY/$REPOSITORY:$IMAGE_TAG $DO_REPOSITORY:$IMAGE_TAG
+          docker push $DO_REPOSITORY:$IMAGE_TAG
+      - name: Save DigitalOcean kubeconfig with short-lived credentials
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 production
+      - name: Deploy the App
+        timeout-minutes: 10
+        env:
+          DO_REPOSITORY: registry.digitalocean.com/moksha-production/${{ matrix.container == 'api' && 'api' || 'ui' }}
+        run: |
+          BASE64_WEBHOOK_SECRET=$(echo -n "${{ secrets.WEBHOOK_SECRET }}" | base64)
+          sed -i "s/VERSION/${{ github.sha }}/g" website/manifests/deployment.yaml
+          sed -i "s/WEBHOOK_SECRET/$BASE64_WEBHOOK_SECRET/g" website/manifests/secret.yaml
+          kubectl apply -f website/manifests
+          
