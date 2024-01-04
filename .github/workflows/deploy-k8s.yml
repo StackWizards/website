@@ -21,7 +21,7 @@ jobs:
           DO_REPOSITORY: registry.digitalocean.com/moksha-production/stackwizards
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t DO_REPOSITORY:$IMAGE_TAG ./website
+          docker build -t $DO_REPOSITORY:$IMAGE_TAG ./website
           docker push $DO_REPOSITORY:$IMAGE_TAG
       - name: Save DigitalOcean kubeconfig with short-lived credentials
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 production
