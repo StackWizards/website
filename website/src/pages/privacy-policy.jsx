@@ -55,10 +55,10 @@ export default function PrivacyPolicy() {
                                         Introduction
                                     </h2>
                                     <p className="mt-8">
-                                        Welcome to StackWizards ("we," "our," or "us"). This Privacy Policy explains how
+                                        Welcome to StackWizards (&quot;we,&quot; our,&quot; or &quot;us&quot;). This Privacy Policy explains how
                                         we collect, use, disclose, and safeguard your personal information when you
-                                        visit our website [www.stackwizards.com] (the "Site") or use our services
-                                        (collectively, the "Services").
+                                        visit our website [www.stackwizards.com] (the &quot;Site&quot;) or use our services
+                                        (collectively, the &quot;Services&quot;).
                                     </p>
                                     <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">2. Information
                                         We Collect</h2>
