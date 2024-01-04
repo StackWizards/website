@@ -13,17 +13,17 @@ import Contact from "@/components/landing/Contact";
 const howWeCanHelp = [
     {
         title: "Process Automation",
-        description: "We can help you automate your processes to save you time and money.",
+        description: "We can help you automate your processes so you have more time to focus on strategy and growth.",
         image: processAutomationImg,
     },
     {
         title: "Scaling Challenges",
-        description: "We can help you scale your business with technology.",
+        description: "Running your business off 20+ spreadsheets? Find out how we can help improve your processes and save you time.",
         image: scalingImg,
     },
     {
         title: "Software Development",
-        description: "We can help you build software that will delight your customers.",
+        description: "We can help you build software that will delight your customers, empower your team and help you scale.",
         image: dev,
     },
 ]
