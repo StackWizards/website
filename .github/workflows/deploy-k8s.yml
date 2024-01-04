@@ -18,12 +18,10 @@ jobs:
         run: doctl registry login --expiry-seconds 1200
       - name: Push image to DigitalOcean Container Registry
         env:
-          REPOSITORY: stackwizards}
           DO_REPOSITORY: registry.digitalocean.com/moksha-production/stackwizards
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./website
-          docker tag $REGISTRY/$REPOSITORY:$IMAGE_TAG $DO_REPOSITORY:$IMAGE_TAG
+          docker build -t $DO_REGISTRY:$IMAGE_TAG ./website
           docker push $DO_REPOSITORY:$IMAGE_TAG
       - name: Save DigitalOcean kubeconfig with short-lived credentials
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 production
