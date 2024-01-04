@@ -5,7 +5,7 @@ export default function Contact() {
     const [signUpMailing, setSignupMailing] = useState(true)
 
     return (
-        <div id="contact" className="relative isolate bg-white px-6 py-24 sm:py-16 lg:px-8">
+        <div id="contact" className="relative isolate px-6 py-24 sm:py-16 lg:px-8">
             <svg
                 className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
                 aria-hidden="true"

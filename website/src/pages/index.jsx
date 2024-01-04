@@ -10,6 +10,7 @@ import { WhoAreYou } from '@/components/WhoAreYou'
 import { WhoChoice } from '@/components/WhoChoice'
 import { Services } from '@/components/Services'
 import { WhatDoWeDo } from '@/components/WhatDoWeDo'
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
         <WhatDoWeDo />
         <Services />
         <Stats />
+        <Contact />
         <div id="who" />
         <MeetUs />
         <div className='relative'>
