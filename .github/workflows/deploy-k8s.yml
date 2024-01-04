@@ -31,7 +31,7 @@ jobs:
             WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
             GITHUB_SHA: ${{ github.sha }}
         run: |
-          BASE64_WEBHOOK_SECRET=$(echo -n $WEBHOOK_SECRET }}" | base64)
+          BASE64_WEBHOOK_SECRET=$(echo -n $WEBHOOK_SECRET | base64)
           sed -i "s/VERSION/$GITHUB_SHA/g" website/manifests/deployment.yaml
           sed -i "s/WEBHOOK_SECRET/$BASE64_WEBHOOK_SECRET/g" website/manifests/secret.yaml
           kubectl apply -f website/manifests
