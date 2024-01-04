@@ -3,6 +3,7 @@ import Head from 'next/head'
 import heroImg from './hero.png'
 import processAutomationImg from './process-automation.png'
 import scalingImg from './scaling.png'
+import dev from './dev.png'
 import {Footer} from "@/components/Footer";
 import Hero from "@/components/landing/Hero";
 import HowWeCanHelp from "@/components/landing/HowWeCanHelp";
@@ -23,7 +24,7 @@ const howWeCanHelp = [
     {
         title: "Software Development",
         description: "We can help you build software that will delight your customers.",
-        image: "",
+        image: dev,
     },
 ]
 
