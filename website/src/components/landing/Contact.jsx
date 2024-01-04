@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Link from "next/link";
 
 export default function Contact() {
     const [signUpMailing, setSignupMailing] = useState(true)
@@ -160,9 +161,9 @@ export default function Contact() {
                         </div>
                         <p className="mt-4 text-sm leading-6 text-gray-500">
                             By submitting this form, I agree to the{' '}
-                            <a href="/privacy-policy" className="font-semibold text-teal-600">
+                            <Link href="/privacy-policy" className="font-semibold text-teal-600">
                                     privacy&nbsp;policy
-                                </a>
+                                </Link>
                                 .
                             </p>
                     </form>
