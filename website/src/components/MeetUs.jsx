@@ -1,5 +1,7 @@
 import alistair from '@/images/avatars/alistair.png';
 import andy from '@/images/avatars/andy.jpeg';
+import mike from '@/images/avatars/mike.png';
+import person from '@/images/avatars/person.png';
 import Image from 'next/image';
 import { SocialIcon } from 'react-social-icons';
 import { Section } from '../animation/Section';
@@ -27,6 +29,18 @@ const people = [
         medium: 'https://medium.com/@AndyMacDroo',
         imageUrl: andy,
     },
+    {
+        name: 'Mike Rushton',
+        role: 'Software Engineer',
+        github: 'https://github.com/michaelrushton-dev',
+        imageUrl: mike,
+    },
+    {
+        name: 'Luke Robinson',
+        role: 'Senior Software Engineer',
+        github: 'https://github.com/Datedsandwich',
+        imageUrl: person,
+    }
 ];
 
 export function MeetUs() {
@@ -57,13 +71,13 @@ export function MeetUs() {
                                 ]
                                 } />
                             <div className='h-2' />
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-8 md:gap-x-16">
+                            <div className="grid grid-cols-1 lg:grid-cols-4 gap-y-10 gap-x-8 md:gap-x-16">
                                 {people.map((person) => (
                                     <div key={person.name} className="flex items-center justify-center">
                                         <div className="space-y-4 flex flex-col items-center justify-center">
                                             <div className="transition-all h-80 w-80 lg:h-48 lg:w-48 my-2">
                                                 <Image
-                                                    className="transition-all h-80 w-80 lg:h-48 lg:w-48 rounded-lg border-2 border-slate-900 grayscale"
+                                                    className="transition-all h-80 w-80 lg:h-48 lg:w-48 rounded-lg border-2 border-slate-900 grayscale hover:grayscale-0"
                                                     src={person.imageUrl}
                                                     alt="Avatar"
                                                     unoptimized
@@ -83,6 +97,7 @@ export function MeetUs() {
                                                         </a>
                                                     </div>
                                                     <div className="flex">
+                                                        {person.twitter && (
                                                         <SocialIcon
                                                             bgColor="black"
                                                             className="transition-all mr-2 hover:scale-90"
@@ -90,6 +105,8 @@ export function MeetUs() {
                                                             target='_blank'
                                                             url={person.twitter}
                                                         />
+                                                        )}
+                                                        {person.linkedIn && (
                                                         <SocialIcon
                                                             bgColor="black"
                                                             className="transition-all mr-2 hover:scale-90"
@@ -97,6 +114,8 @@ export function MeetUs() {
                                                             target='_blank'
                                                             url={person.linkedIn}
                                                         />
+                                                            )}
+                                                        {person.github && (
                                                         <SocialIcon
                                                             bgColor="black"
                                                             className="transition-all mr-2 hover:scale-90"
@@ -104,6 +123,7 @@ export function MeetUs() {
                                                             target='_blank'
                                                             url={person.github}
                                                         />
+                                                        )}
                                                         {person.medium && (
                                                             <SocialIcon
                                                                 bgColor="black"
