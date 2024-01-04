@@ -8,7 +8,7 @@ import {Footer} from "@/components/Footer";
 import Hero from "@/components/landing/Hero";
 import HowWeCanHelp from "@/components/landing/HowWeCanHelp";
 import Testimonial from "@/components/landing/Testimonial";
-import Contact from "@/components/landing/Contact";
+import Contact from "@/components/Contact";
 
 const howWeCanHelp = [
     {
