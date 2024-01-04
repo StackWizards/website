@@ -29,7 +29,7 @@ jobs:
         timeout-minutes: 10
         run: |
           BASE64_WEBHOOK_SECRET=$(echo -n "${{ secrets.WEBHOOK_SECRET }}" | base64)
-          sed -i "s/VERSION/${{ github.sha }}/g" website/manifests/deployment.yaml
-          sed -i "s/WEBHOOK_SECRET/$BASE64_WEBHOOK_SECRET/g" website/manifests/secret.yaml
+          sed -i 's/VERSION/${{ github.sha }}/g' website/manifests/deployment.yaml
+          sed -i 's/WEBHOOK_SECRET/$BASE64_WEBHOOK_SECRET/g' website/manifests/secret.yaml
           kubectl apply -f website/manifests
           
