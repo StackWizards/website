@@ -23,7 +23,7 @@ spec:
               envFrom:
                 - secretRef:
                     name: website-secret
-              livelinessProbe:
+              livenessProbe:
                 httpGet:
                   path: /manifest.json
                   port: 3000
