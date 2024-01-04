@@ -6,7 +6,7 @@ metadata:
   name: website
   namespace: stackwizards
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-stg
+    cert-manager.io/cluster-issuer: letsencrypt-prod
     traefik.ingress.kubernetes.io/router.middlewares: traefik-redirect-scheme@kubernetescrd
 spec:
   tls:
