@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import heroImg from './hero.png'
 import processAutomationImg from './process-automation.png'
+import scalingImg from './scaling.png'
 import {Footer} from "@/components/Footer";
 import Hero from "@/components/landing/Hero";
 import HowWeCanHelp from "@/components/landing/HowWeCanHelp";
@@ -17,7 +18,7 @@ const howWeCanHelp = [
     {
         title: "Scaling Challenges",
         description: "We can help you scale your business with technology.",
-        image: "",
+        image: scalingImg,
     },
     {
         title: "Software Development",

@@ -27,8 +27,6 @@ jobs:
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 production
       - name: Deploy the App
         timeout-minutes: 10
-        env:
-          DO_REPOSITORY: registry.digitalocean.com/moksha-production/${{ matrix.container == 'api' && 'api' || 'ui' }}
         run: |
           BASE64_WEBHOOK_SECRET=$(echo -n "${{ secrets.WEBHOOK_SECRET }}" | base64)
           sed -i "s/VERSION/${{ github.sha }}/g" website/manifests/deployment.yaml
