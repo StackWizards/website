@@ -17,6 +17,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  redirects: async () => [
+    {
+      source: '/:path*',
+      has: [{ type: 'host', value: `stackwizards.com` }],
+      destination: `https://www.stackwizards.com/:path*`,
+      permanent: true
+    },
+  ]
 }
 
 
