@@ -7,7 +7,25 @@ export default async function handler(req, res) {
     return res.redirect(302,'/error');
   }
 
-  const { firstName, lastName, email, message, mailingList, budget, website } = req.body;
+  const { firstName, lastName, email, message, mailingList, budget, website, captcha } = req.body;
+  // verify the recapcha
+
+  console.log('captcha', captcha)
+
+  const resp = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captcha}`)
+
+
+  const data = await resp.json()
+  console.log('data', data)
+  if (!data.success) {
+    console.error('Recaptcha failed')
+    return res.redirect(302,'/error');
+  }
+
+
+
+  console.log('req.body', req.body)
+
 
   if (!firstName || !lastName || !email || !message) {
     console.error('Missing required fields on website submission', req.body)
@@ -68,6 +86,8 @@ export default async function handler(req, res) {
       },
     ]
   }
+
+
 
   // post to slack
   await fetch(slackUrl, {

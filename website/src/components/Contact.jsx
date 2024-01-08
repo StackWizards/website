@@ -1,8 +1,41 @@
 import {useState} from "react";
 import Link from "next/link";
+import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
+import { useRouter } from 'next/navigation'
 
 export default function Contact() {
     const [signUpMailing, setSignupMailing] = useState(true)
+    const [captureValue, setCaptureValue] = useState(null)
+    const { executeRecaptcha } = useGoogleReCaptcha();
+    const router = useRouter()
+
+
+    const onSubmit = (e) => {
+        // post off to /api/contact/submit
+        executeRecaptcha('contact').then((token) => {
+            setCaptureValue(token);
+        });
+        e.preventDefault()
+        const form = e.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        data.mailingList = signUpMailing;
+        data.captcha = captureValue;
+        fetch('/api/contact/submit', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then((response) => {
+            // redirect to thank you page
+            router.push("/contact/success");
+
+        }).catch((error) => {
+            console.error('Error:', error);
+            // alert('Sorry, there was an error submitting your message. Please try again later.')
+        });
+    }
 
     return (
         <div id="contact" className="relative isolate px-6 py-24 sm:py-16 lg:px-8">
@@ -36,7 +69,12 @@ export default function Contact() {
                     We help companies and individuals build out their brand guidelines.
                 </p>
                 <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
-                    <form action="/api/contact/submit" method="POST" className="lg:flex-auto">
+                    <form action="/api/contact/submit" method="POST" className="lg:flex-auto" onSubmit={onSubmit}>
+                        {/*<GoogleReCaptcha*/}
+                        {/*    onVerify={token => {*/}
+                        {/*        setCaptureValue(token);*/}
+                        {/*    }}*/}
+                        {/*/>*/}
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <label htmlFor="firstName"

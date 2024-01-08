@@ -11,41 +11,44 @@ import { WhoChoice } from '@/components/WhoChoice'
 import { Services } from '@/components/Services'
 import { WhatDoWeDo } from '@/components/WhatDoWeDo'
 import Contact from "@/components/Contact";
+import {GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>StackWizards - Your good ideas in safe hands</title>
-        <meta
-          name="description"
-          content="StackWizards is a software engineering consultancy with a mission - to help you deliver your great ideas."
-        />
-      </Head>
-      <Header />
-      <main className='transition-all'>
-        <Hero />
+    return (
+        <>
+            <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} >
+                <Head>
+                    <title>StackWizards - Your good ideas in safe hands</title>
+                    <meta
+                        name="description"
+                        content="StackWizards is a software engineering consultancy with a mission - to help you deliver your great ideas."
+                    />
+                </Head>
+                <Header />
+                <main className='transition-all'>
+                    <Hero />
 
-        <div className='transition-all h-0 h-6 xl:h-32' id="you" />
-        <WhoAreYou />
-        <div className='h-2'   />
-        <WhoChoice />
-        <div className='h-12' id="what" />
-        <WhatDoWeDo />
-        <Services />
-        <Stats />
-        <Contact />
-        <div id="who" />
-        <MeetUs />
-        <div className='relative'>
-          <AbstractWavyBackground upsideDown className='bottom-12' />
-        </div>
-      </main>
+                    <div className='transition-all h-0 h-6 xl:h-32' id="you" />
+                    <WhoAreYou />
+                    <div className='h-2'   />
+                    <WhoChoice />
+                    <div className='h-12' id="what" />
+                    <WhatDoWeDo />
+                    <Services />
+                    <Stats />
+                    <Contact />
+                    <div id="who" />
+                    <MeetUs />
+                    <div className='relative'>
+                        <AbstractWavyBackground upsideDown className='bottom-12' />
+                    </div>
+                </main>
 
-      <div className='relative'>
-        <AbstractWavyBackground upsideDown className='bottom-80' tailwindColour='bg-slate-50 h-64' colour='#f8fafc' />
-        <Footer />
-      </div>
-    </>
-  )
+                <div className='relative'>
+                    <AbstractWavyBackground upsideDown className='bottom-80' tailwindColour='bg-slate-50 h-64' colour='#f8fafc' />
+                    <Footer />
+                </div>
+            </GoogleReCaptchaProvider>
+        </>
+    )
 }
