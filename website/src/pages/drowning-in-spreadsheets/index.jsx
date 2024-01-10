@@ -9,6 +9,7 @@ import Hero from "@/components/landing/Hero";
 import HowWeCanHelp from "@/components/landing/HowWeCanHelp";
 import Testimonial from "@/components/landing/Testimonial";
 import Contact from "@/components/Contact";
+import {GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
 
 const howWeCanHelp = [
     {
@@ -32,6 +33,7 @@ const howWeCanHelp = [
 export default function Home() {
     return (
         <>
+            <GoogleReCaptchaProvider reCaptchaKey={"6LfqokkpAAAAAL8Wj8pV1xytzY5WyNofvyvt9C7a"} >
             <Head>
                 <title>StackWizards - Your good ideas in safe hands</title>
                 <meta

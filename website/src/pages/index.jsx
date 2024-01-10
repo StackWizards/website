@@ -16,7 +16,7 @@ import {GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
 export default function Home() {
     return (
         <>
-            <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} >
+            <GoogleReCaptchaProvider reCaptchaKey={"6LfqokkpAAAAAL8Wj8pV1xytzY5WyNofvyvt9C7a"} >
                 <Head>
                     <title>StackWizards - Your good ideas in safe hands</title>
                     <meta
