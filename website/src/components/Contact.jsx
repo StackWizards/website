@@ -1,6 +1,6 @@
-import {useState} from "react";
+import { useState } from "react";
 import Link from "next/link";
-import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useRouter } from 'next/navigation'
 
 export default function Contact() {
@@ -10,31 +10,31 @@ export default function Contact() {
     const router = useRouter()
 
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         // post off to /api/contact/submit
-        executeRecaptcha('contact').then((token) => {
-            setCaptureValue(token);
-        });
+        const token = await executeRecaptcha('contact')
+
         e.preventDefault()
-        const form = e.target;
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        data.mailingList = signUpMailing;
-        data.captcha = captureValue;
+        const form = e.target
+        const formData = new FormData(form)
+        const data = Object.fromEntries(formData)
+        data.mailingList = signUpMailing
+        data.captcha = token
         fetch('/api/contact/submit', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json',
             },
-        }).then((response) => {
-            // redirect to thank you page
-            router.push("/contact/success");
-
-        }).catch((error) => {
-            console.error('Error:', error);
-            // alert('Sorry, there was an error submitting your message. Please try again later.')
-        });
+        })
+            .then((response) => {
+                // redirect to thank you page
+                router.push('/contact/success')
+            })
+            .catch((error) => {
+                console.error('Error:', error)
+                // alert('Sorry, there was an error submitting your message. Please try again later.')
+            })
     }
 
     return (
@@ -78,7 +78,7 @@ export default function Contact() {
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <label htmlFor="firstName"
-                                       className="block text-sm font-semibold leading-6 text-gray-900">
+                                    className="block text-sm font-semibold leading-6 text-gray-900">
                                     First name *
                                 </label>
                                 <div className="mt-2.5">
@@ -94,7 +94,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <label htmlFor="lastName"
-                                       className="block text-sm font-semibold leading-6 text-gray-900">
+                                    className="block text-sm font-semibold leading-6 text-gray-900">
                                     Last name *
                                 </label>
                                 <div className="mt-2.5">
@@ -123,7 +123,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <label htmlFor="website"
-                                       className="block text-sm font-semibold leading-6 text-gray-900">
+                                    className="block text-sm font-semibold leading-6 text-gray-900">
                                     Website
                                 </label>
                                 <div className="mt-2.5">
@@ -137,7 +137,7 @@ export default function Contact() {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email"
-                                       className="block text-sm font-semibold leading-6 text-gray-900">
+                                    className="block text-sm font-semibold leading-6 text-gray-900">
                                     Email *
                                 </label>
                                 <div className="mt-2.5">
@@ -152,18 +152,18 @@ export default function Contact() {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="message"
-                                       className="block text-sm font-semibold leading-6 text-gray-900">
+                                    className="block text-sm font-semibold leading-6 text-gray-900">
                                     Message *
                                 </label>
                                 <div className="mt-2.5">
-                  <textarea
-                      id="message"
-                      name="message"
-                      required={true}
-                      rows={4}
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6"
-                      defaultValue={''}
-                  />
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        required={true}
+                                        rows={4}
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6"
+                                        defaultValue={''}
+                                    />
 
                                 </div>
                             </div>
@@ -200,13 +200,13 @@ export default function Contact() {
                         <p className="mt-4 text-sm leading-6 text-gray-500">
                             By submitting this form, I agree to the{' '}
                             <Link href="/privacy-policy" className="font-semibold text-teal-600">
-                                    privacy&nbsp;policy
-                                </Link>
-                                .
-                            </p>
+                                privacy&nbsp;policy
+                            </Link>
+                            .
+                        </p>
                     </form>
                 </div>
             </div>
         </div>
-)
+    )
 }
