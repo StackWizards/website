@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation'
 
 export default function Contact() {
     const [signUpMailing, setSignupMailing] = useState(true)
-    const [captureValue, setCaptureValue] = useState(null)
     const { executeRecaptcha } = useGoogleReCaptcha();
     const router = useRouter()
 
