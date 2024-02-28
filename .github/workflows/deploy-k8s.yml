@@ -34,6 +34,7 @@ jobs:
         run: |
           BASE64_WEBHOOK_SECRET=$(echo -n $WEBHOOK_SECRET | base64 -w 0 )
           BASE64_RECAPTCHA_SECRET_KEY=$(echo -n $RECAPTCHA_SECRET_KEY | base64 -w 0 )
+          sed -i "s/VERSION/$GITHUB_SHA/g" website/manifests/namespace.yaml
           sed -i "s/VERSION/$GITHUB_SHA/g" website/manifests/deployment.yaml
           sed -i "s/WEBHOOK_SECRET/$BASE64_WEBHOOK_SECRET/g" website/manifests/secret.yaml
           sed -i "s/RECAPTCHA_SECRET_KEY_VALUE/$BASE64_RECAPTCHA_SECRET_KEY/g" website/manifests/secret.yaml
