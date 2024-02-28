@@ -14,6 +14,7 @@ export default function Error () {
                             alt=""
                         />
                     </Link>
+                    
                 </header>
                 <main className="mx-auto w-full max-w-7xl px-6 py-24 sm:py-32 lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:px-8">
                     <div className="max-w-lg">
